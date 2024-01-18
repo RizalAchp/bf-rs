@@ -161,8 +161,8 @@ impl fmt::Display for IRError {
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Op {
-    kind: OpKind,
-    operand: isize,
+    pub(crate) kind: OpKind,
+    pub(crate) operand: isize,
 }
 impl Op {
     const fn new(kind: OpKind, operands: isize) -> Self {
